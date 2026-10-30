@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -67,22 +68,10 @@
         <!-- O JavaScript criará os elementos aqui -->
     </main>
 
-    <footer>
-        <div class="bloco-footer" id="bloco1">
-            <p>Primeira div do footer</p>
-        </div>
-
-        <div class="bloco-footer" id="bloco2">
-            <p>Segunda div do footer</p>
-        </div>
-
-        <div class="bloco-footer" id="bloco3">
-            <p>Terceira div do footer</p>
-        </div>
-    </footer>
 
     <script>
         
+
 // Selecionar o elemento main
 const main = document.getElementById("conteudo");
 
@@ -102,9 +91,7 @@ document.querySelector("header").style.color = "white";
 // Personalizar o menu
 document.querySelector("nav").style.backgroundColor = "#f0d9d9";
 
-// Personalizar o footer
-document.querySelector("footer").style.backgroundColor = "#222";
-document.querySelector("footer").style.color = "white";
+
 
 // Centralizar os blocos do footer
 const blocos = document.querySelectorAll(".bloco-footer");
@@ -117,42 +104,36 @@ blocos.forEach(bloco => {
 
 // CRIAR UM TÍTULO
 const titulo = document.createElement("h1");
-
 titulo.textContent = "Japão: A Terra do Sol Nascente";
-
 titulo.style.color = "#bc002d";
 titulo.style.fontSize = "32px";
-
 main.appendChild(titulo);
 
 // CRIAR UM SUBTÍTULO
 const subtitulo = document.createElement("h2");
-
-subtitulo.textContent = "Conhecendo a cultura japonesa";
-
+subtitulo.textContent = "Minha experiência na Feira das Nações";
 subtitulo.style.color = "#333";
-
 main.appendChild(subtitulo);
 
-// CRIAR UM PARÁGRAFO
+// CRIAR PARÁGRAFO COM OPINIÃO
 const paragrafo = document.createElement("p");
 
-paragrafo.textContent = "O Japão é um país localizado no leste da Ásia, conhecido por sua rica cultura, tecnologia avançada, tradições milenares e paisagens impressionantes.";
+paragrafo.textContent = "Eu achei a Feira das Nações uma experiência muito interessante e divertida. Foi uma oportunidade de conhecer um pouco mais sobre a cultura de outros países, suas tradições, comidas e costumes. O espaço do Japão chamou minha atenção pela sua cultura tão diferente e interessante.";
 
 main.appendChild(paragrafo);
 
-// CRIAR OUTRO PARÁGRAFO
+// CRIAR OUTRO PARÁGRAFO COM OPINIÃO
 const paragrafo2 = document.createElement("p");
 
-paragrafo2.textContent = "Sua capital é Tóquio, uma das maiores e mais movimentadas cidades do mundo. O país também é conhecido pelos templos, jardins, animes, mangás e pela culinária tradicional.";
+paragrafo2.textContent = "Gostei bastante de conhecer mais sobre o Japão e ver como seus elementos culturais foram apresentados na feira. Achei interessante a dedicação na organização e na decoração do espaço, pois tornou a experiência mais interativa e ajudou a entender melhor a cultura japonesa.";
 
 main.appendChild(paragrafo2);
 
 // CRIAR UMA IMAGEM
 const imagem = document.createElement("img");
 
-imagem.src = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900";
-imagem.alt = "Paisagem tradicional japonesa com templo e arquitetura";
+imagem.src = "https://st3.depositphotos.com/1035350/18412/i/450/depositphotos_184121238-stock-photo-fujiyoshida-japan-spring-landscape.jpg";
+imagem.alt = "Paisagem tradicional japonesa";
 
 imagem.style.width = "80%";
 imagem.style.maxWidth = "500px";
@@ -162,10 +143,10 @@ imagem.style.display = "block";
 
 main.appendChild(imagem);
 
-// CRIAR UM SUBTÍTULO PARA A LISTA
+// CRIAR SUBTÍTULO DA LISTA
 const tituloLista = document.createElement("h2");
 
-tituloLista.textContent = "Curiosidades sobre o Japão";
+tituloLista.textContent = "Elementos apresentados na Feira das Nações";
 tituloLista.style.color = "#bc002d";
 
 main.appendChild(tituloLista);
@@ -178,43 +159,36 @@ lista.style.textAlign = "left";
 lista.style.lineHeight = "2";
 lista.style.fontSize = "17px";
 
-// Primeiro item
-const item1 = document.createElement("li");
+// Itens da lista
+const elementos = [
+    "Bandeira do Japão, representando o país.",
+    "Comidas típicas da culinária japonesa, como sushi.",
+    "Decoração inspirada na cultura japonesa.",
+    "Informações sobre os costumes e tradições do Japão.",
+    "Representações da cultura japonesa, como animes e mangás.",
+    "Imagens e referências a pontos turísticos japoneses."
+];
 
-item1.textContent = "A moeda oficial do Japão é o iene.";
+// Criar os itens automaticamente
+elementos.forEach(elemento => {
+    const item = document.createElement("li");
+    item.textContent = elemento;
+    lista.appendChild(item);
+});
 
-lista.appendChild(item1);
-
-// Segundo item
-const item2 = document.createElement("li");
-
-item2.textContent = "O Japão possui milhares de ilhas.";
-
-lista.appendChild(item2);
-
-// Terceiro item
-const item3 = document.createElement("li");
-
-item3.textContent = "O Monte Fuji é a montanha mais alta do país.";
-
-lista.appendChild(item3);
-
-// Quarto item
-const item4 = document.createElement("li");
-
-item4.textContent = "O sushi é um dos pratos mais conhecidos da culinária japonesa.";
-
-lista.appendChild(item4);
-
-// Quinto item
-const item5 = document.createElement("li");
-
-item5.textContent = "A flor de cerejeira, chamada Sakura, é um símbolo muito conhecido do Japão.";
-
-lista.appendChild(item5);
-
-// Adicionar a lista ao main
+// Adicionar lista ao main
 main.appendChild(lista);
+
+// CRIAR PARÁGRAFO FINAL
+const final = document.createElement("p");
+
+final.textContent = "No geral, gostei muito de participar da Feira das Nações. Foi uma experiência que contribuiu para meu aprendizado e mostrou como podemos conhecer diferentes culturas sem precisar sair do nosso país.";
+
+final.style.marginTop = "25px";
+final.style.fontWeight = "bold";
+final.style.color = "#bc002d";
+
+main.appendChild(final);
 
     </script>
 
