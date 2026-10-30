@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML, CSS e DOM</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+        footer {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        .bloco-footer {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        #bloco1 {
+            background-color: lightcoral;
+        }
+
+        #bloco2 {
+            background-color: lightgreen;
+        }
+
+        #bloco3 {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <footer>
+        <div class="bloco-footer" id="bloco1">
+            <p>Primeira div do footer</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco2">
+            <p>Segunda div do footer</p>
+        </div>
+
+        <div class="bloco-footer" id="bloco3">
+            <p>Terceira div do footer</p>
+        </div>
+    </footer>
+
+    <script>
+        
+// Selecionar o elemento main
+const main = document.getElementById("conteudo");
+
+// MODIFICAR O CSS PELO JAVASCRIPT
+document.body.style.backgroundColor = "#f5f0e8";
+document.body.style.fontFamily = "Arial, sans-serif";
+document.body.style.textAlign = "center";
+
+main.style.backgroundColor = "#fffaf5";
+main.style.padding = "30px";
+main.style.textAlign = "center";
+
+// Personalizar o header
+document.querySelector("header").style.backgroundColor = "#bc002d";
+document.querySelector("header").style.color = "white";
+
+// Personalizar o menu
+document.querySelector("nav").style.backgroundColor = "#f0d9d9";
+
+// Personalizar o footer
+document.querySelector("footer").style.backgroundColor = "#222";
+document.querySelector("footer").style.color = "white";
+
+// Centralizar os blocos do footer
+const blocos = document.querySelectorAll(".bloco-footer");
+
+blocos.forEach(bloco => {
+    bloco.style.display = "inline-block";
+    bloco.style.padding = "15px";
+    bloco.style.borderRadius = "10px";
+});
+
+// CRIAR UM TÍTULO
+const titulo = document.createElement("h1");
+
+titulo.textContent = "Japão: A Terra do Sol Nascente";
+
+titulo.style.color = "#bc002d";
+titulo.style.fontSize = "32px";
+
+main.appendChild(titulo);
+
+// CRIAR UM SUBTÍTULO
+const subtitulo = document.createElement("h2");
+
+subtitulo.textContent = "Conhecendo a cultura japonesa";
+
+subtitulo.style.color = "#333";
+
+main.appendChild(subtitulo);
+
+// CRIAR UM PARÁGRAFO
+const paragrafo = document.createElement("p");
+
+paragrafo.textContent = "O Japão é um país localizado no leste da Ásia, conhecido por sua rica cultura, tecnologia avançada, tradições milenares e paisagens impressionantes.";
+
+main.appendChild(paragrafo);
+
+// CRIAR OUTRO PARÁGRAFO
+const paragrafo2 = document.createElement("p");
+
+paragrafo2.textContent = "Sua capital é Tóquio, uma das maiores e mais movimentadas cidades do mundo. O país também é conhecido pelos templos, jardins, animes, mangás e pela culinária tradicional.";
+
+main.appendChild(paragrafo2);
+
+// CRIAR UMA IMAGEM
+const imagem = document.createElement("img");
+
+imagem.src = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900";
+imagem.alt = "Paisagem tradicional japonesa com templo e arquitetura";
+
+imagem.style.width = "80%";
+imagem.style.maxWidth = "500px";
+imagem.style.borderRadius = "15px";
+imagem.style.margin = "20px auto";
+imagem.style.display = "block";
+
+main.appendChild(imagem);
+
+// CRIAR UM SUBTÍTULO PARA A LISTA
+const tituloLista = document.createElement("h2");
+
+tituloLista.textContent = "Curiosidades sobre o Japão";
+tituloLista.style.color = "#bc002d";
+
+main.appendChild(tituloLista);
+
+// CRIAR UMA LISTA ORDENADA
+const lista = document.createElement("ol");
+
+lista.style.display = "inline-block";
+lista.style.textAlign = "left";
+lista.style.lineHeight = "2";
+lista.style.fontSize = "17px";
+
+// Primeiro item
+const item1 = document.createElement("li");
+
+item1.textContent = "A moeda oficial do Japão é o iene.";
+
+lista.appendChild(item1);
+
+// Segundo item
+const item2 = document.createElement("li");
+
+item2.textContent = "O Japão possui milhares de ilhas.";
+
+lista.appendChild(item2);
+
+// Terceiro item
+const item3 = document.createElement("li");
+
+item3.textContent = "O Monte Fuji é a montanha mais alta do país.";
+
+lista.appendChild(item3);
+
+// Quarto item
+const item4 = document.createElement("li");
+
+item4.textContent = "O sushi é um dos pratos mais conhecidos da culinária japonesa.";
+
+lista.appendChild(item4);
+
+// Quinto item
+const item5 = document.createElement("li");
+
+item5.textContent = "A flor de cerejeira, chamada Sakura, é um símbolo muito conhecido do Japão.";
+
+lista.appendChild(item5);
+
+// Adicionar a lista ao main
+main.appendChild(lista);
+
+    </script>
+
+</body>
+</html>
